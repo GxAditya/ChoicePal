@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChoicePal - The Playful Preferences Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nimbus+Mono+PS:wght@700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="topic-screen" class="screen active">
+            <span class="celestial-icon">✨</span>
+            <h1>ChoicePal</h1>
+            <span class="celestial-icon">🌟</span>
+            <p>Enter a topic to start the game!</p>
+            <input type="text" id="topic-input" placeholder="e.g., food, movies, animals...">
+            <button id="start-btn">Start Game</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <span class="celestial-icon">🌙</span>
+            <div id="player-indicator"></div>
+            <div class="cards-container">
+                <div class="card" id="option1"></div>
+                <div class="card" id="option2"></div>
+            </div>
+            <div id="progress-bar"></div>
+            <span class="celestial-icon">⭐</span>
+        </div>
+
+        <div id="pass-screen" class="screen">
+            <span class="celestial-icon">🌠</span>
+            <h2>Pass it to your partner!</h2>
+            <button id="continue-btn">Continue</button>
+            <span class="celestial-icon">💫</span>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <span class="celestial-icon">🌟</span>
+            <h2>Results</h2>
+            <div id="compatibility-score"></div>
+            <div class="progress-container">
+                <div class="progress-bar" id="compatibility-bar"></div>
+            </div>
+            <div class="choices-comparison-container">
+                <!-- Choices will be added here dynamically -->
+            </div>
+            <button id="play-again-btn">Play Again</button>
+            <span class="celestial-icon">✨</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="aiService.js"></script>
+</body>
+</html>
