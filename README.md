@@ -23,7 +23,7 @@ ChoicePal is a fun, interactive web game that helps couples, friends, and famili
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/GxAditya/ChoicePal.git
 cd ChoicePal
 ```
 
