@@ -6,7 +6,7 @@ class ChoicePalGame {
         this.currentPairIndex = 0;
         this.gamePairs = [];
         this.setupEventListeners();
-        this.aiService = new AIService();
+        this.aiService = null;
     }
 
     setupEventListeners() {
@@ -20,7 +20,13 @@ class ChoicePalGame {
 
     async startGame() {
         const topic = document.getElementById('topic-input').value;
-        if (!topic) return;
+        const apiKey = document.getElementById('api-key-input').value;
+        if (!topic || !apiKey) {
+            alert('Please enter both a topic and your API key.');
+            return;
+        }
+
+        this.aiService = new AIService(apiKey);
 
         const startBtn = document.getElementById('start-btn');
         startBtn.textContent = 'Generating...';
@@ -36,7 +42,7 @@ class ChoicePalGame {
             this.updateGameDisplay();
         } catch (error) {
             console.error('Game generation failed:', error);
-            alert('Failed to generate game. Please try a different topic!');
+            alert('Failed to generate game. Please check your API key and try again!');
         } finally {
             startBtn.textContent = 'Start Game';
             startBtn.disabled = false;
@@ -152,7 +158,9 @@ class ChoicePalGame {
         this.player2Choices = [];
         this.currentPairIndex = 0;
         this.gamePairs = [];
+        this.aiService = null;
         document.getElementById('topic-input').value = '';
+        document.getElementById('api-key-input').value = '';
         this.showScreen('topic-screen');
     }
 }

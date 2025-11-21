@@ -1,8 +1,8 @@
 class AIService {
-    constructor() {
+    constructor(apiKey) {
         this.cache = new Map();
-        this.API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
-        this.API_KEY = 'YOUR_GEMINI_API_KEY'; // Replace with your Gemini API key
+        this.API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent';
+        this.API_KEY = apiKey;
     }
 
     async generatePairs(topic) {
