@@ -5,7 +5,7 @@ ChoicePal is a fun, interactive web game that helps couples, friends, and famili
 ## Features ✨
 
 - **Topic-based Gameplay**: Players input any topic (e.g., food, movies, animals) to start the game
-- **AI-Generated Choices**: Uses the Gemini AI API to generate unique pairs of choices based on the chosen topic
+- **AI-Generated Choices**: Uses Google's Gemini 2.5 Flash Lite AI API to generate unique pairs of choices based on the chosen topic
 - **Two-Player Experience**: Players take turns making choices on the same device
 - **Beautiful UI**: Sleek, modern interface with smooth animations and a celestial theme
 - **Compatibility Score**: See how well your choices match with your partner's at the end
@@ -17,7 +17,7 @@ ChoicePal is a fun, interactive web game that helps couples, friends, and famili
 - CSS3 (with modern features like CSS Grid and Flexbox)
 - Vanilla JavaScript (ES6+)
 - Node.js (for local development server)
-- Google's Gemini AI API
+- Google's Gemini 2.5 Flash Lite AI API
 
 ## Getting Started 🚀
 
@@ -27,9 +27,9 @@ git clone https://github.com/GxAditya/ChoicePal.git
 cd ChoicePal
 ```
 
-2. Set up your Gemini API key:
-   - Get your API key from Google's Generative AI platform
-   - Replace the `API_KEY` in `aiService.js` with your key
+2. Get your Gemini API key:
+   - Sign up for Google's Generative AI platform at https://makersuite.google.com/app/apikey
+   - Create and copy your API key
 
 3. Start the local development server:
 ```bash
@@ -41,17 +41,20 @@ node server.js
 http://localhost:3000
 ```
 
+5. Enter your API key and a topic to start playing!
+
 ## How to Play 🎮
 
-1. Enter a topic in the input field
-2. Player 1 makes their choices
-3. Pass the device to Player 2
-4. Player 2 makes their choices
-5. View your compatibility score and comparison of choices
+1. Enter your Gemini API key in the provided field
+2. Enter a topic in the input field (e.g., food, movies, animals)
+3. Player 1 makes their choices
+4. Pass the device to Player 2
+5. Player 2 makes their choices
+6. View your compatibility score and comparison of choices
 
 ## Features in Detail 📝
 
-- **AI Integration**: Uses Gemini AI to generate contextually relevant choices
+- **AI Integration**: Uses Google's Gemini 2.5 Flash Lite AI to generate contextually relevant choices
 - **Fallback System**: Includes predefined choices if AI generation fails
 - **Responsive Cards**: Interactive choice cards with hover effects
 - **Progress Tracking**: Visual indicators for game progress
