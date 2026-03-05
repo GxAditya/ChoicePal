@@ -1,25 +1,30 @@
-# ChoicePal 🌟
+# ChoicePal
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-4ECDC4.svg)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ChoicePal is a fun, interactive web game that helps couples, friends, and families discover how alike they are through an engaging "this or that" choice-based experience.
 
-## Features ✨
+## Features
 
 - **Topic-based Gameplay**: Players input any topic (e.g., food, movies, animals) to start the game
 - **AI-Generated Choices**: Uses Google's Gemini 2.5 Flash Lite AI API to generate unique pairs of choices based on the chosen topic
 - **Two-Player Experience**: Players take turns making choices on the same device
-- **Beautiful UI**: Sleek, modern interface with smooth animations and a celestial theme
+- **Beautiful UI**: Sleek, modern interface with smooth animations and playful design
 - **Compatibility Score**: See how well your choices match with your partner's at the end
 - **Responsive Design**: Works seamlessly on both desktop and mobile devices
 
-## Tech Stack 🛠️
+## Tech Stack
 
 - HTML5
 - CSS3 (with modern features like CSS Grid and Flexbox)
 - Vanilla JavaScript (ES6+)
 - Node.js (for local development server)
-- Google's Gemini 2.5 Flash Lite AI API
+- Google's Gemini Flash Lite AI API
 
-## Getting Started 🚀
+## Getting Started
 
 1. Clone the repository:
 ```bash
@@ -43,7 +48,7 @@ http://localhost:3000
 
 5. Enter your API key and a topic to start playing!
 
-## How to Play 🎮
+## How to Play
 
 1. Enter your Gemini API key in the provided field
 2. Enter a topic in the input field (e.g., food, movies, animals)
@@ -52,7 +57,7 @@ http://localhost:3000
 5. Player 2 makes their choices
 6. View your compatibility score and comparison of choices
 
-## Features in Detail 📝
+## Features in Detail
 
 - **AI Integration**: Uses Google's Gemini 2.5 Flash Lite AI to generate contextually relevant choices
 - **Fallback System**: Includes predefined choices if AI generation fails
@@ -61,7 +66,7 @@ http://localhost:3000
 - **Results Analysis**: Detailed comparison of both players' choices
 - **Replayability**: Easy to start a new game with a different topic
 
-## Browser Support 🌐
+## Browser Support
 
 Supports all modern browsers including:
 - Chrome
@@ -69,10 +74,10 @@ Supports all modern browsers including:
 - Safari
 - Edge
 
-## Contributing 🤝
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License 📄
+## License
 
 This project is open source and available under the MIT License.
