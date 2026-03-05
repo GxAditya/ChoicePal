@@ -1,9 +1,9 @@
 # ChoicePal
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-4ECDC4.svg)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+![License](https://img.shields.io/badge/License-MIT-FF6B5B?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 ChoicePal is a fun, interactive web game that helps couples, friends, and families discover how alike they are through an engaging "this or that" choice-based experience.
 
@@ -33,7 +33,7 @@ cd ChoicePal
 ```
 
 2. Get your Gemini API key:
-   - Sign up for Google's Generative AI platform at https://makersuite.google.com/app/apikey
+   - Sign up for Google AI Studio at https://aistudio.google.com/app/apikey
    - Create and copy your API key
 
 3. Start the local development server:

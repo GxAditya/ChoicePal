@@ -206,6 +206,22 @@ body {
     padding-left: 4px;
 }
 
+.api-link {
+    float: right;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--coral);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.api-link:hover {
+    color: var(--coral-dark);
+    text-decoration: underline;
+}
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
