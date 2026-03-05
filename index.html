@@ -2,47 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChoicePal - The Playful Preferences Game</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FF6B5B">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>ChoicePal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="app">
+        <!-- Topic Screen -->
         <div id="topic-screen" class="screen active">
-            <h1>ChoicePal</h1>
-            <p>Enter a topic to start the game!</p>
-            <input type="text" id="topic-input" placeholder="e.g., food, movies, animals...">
-            <input type="password" id="api-key-input" placeholder="Enter your Gemini API key">
-            <button id="start-btn">Start Game</button>
+            <div class="screen-content">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <svg class="logo-svg" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="white" fill-opacity="0.9"/>
+                            <circle cx="24" cy="24" r="8" fill="#FF6B5B"/>
+                            <circle cx="24" cy="24" r="4" fill="white"/>
+                            <path d="M36 12L32 16" stroke="#FF6B5B" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="36" cy="12" r="3" fill="#4ECDC4"/>
+                        </svg>
+                    </div>
+                    <h1 class="app-title">ChoicePal</h1>
+                    <p class="app-tagline">Discover how alike you are</p>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">What are you curious about?</label>
+                    <input type="text" id="topic-input" placeholder="movies, food, travel..." autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Your Gemini API Key</label>
+                    <input type="password" id="api-key-input" placeholder="••••••••••••••••">
+                </div>
+
+                <div class="action-bottom">
+                    <button id="start-btn" class="btn btn-primary btn-large">
+                        <span class="btn-text">Start Game</span>
+                        <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
 
+        <!-- Game Screen -->
         <div id="game-screen" class="screen">
-            <div id="player-indicator"></div>
-            <div class="cards-container">
-                <div class="card" id="option1"></div>
-                <div class="card" id="option2"></div>
+            <div class="game-header">
+                <div class="player-badge" id="player-badge">
+                    <svg class="player-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="player-name" id="player-indicator">Player 1</span>
+                </div>
+                <div class="progress-dots" id="progress-dots"></div>
             </div>
-            <div id="progress-bar"></div>
+
+            <div class="cards-container" id="cards-container">
+                <div class="choice-card" id="option1">
+                    <div class="card-content">
+                        <span class="card-text"></span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+                <div class="or-divider">
+                    <span class="or-text">OR</span>
+                </div>
+                <div class="choice-card" id="option2">
+                    <div class="card-content">
+                        <span class="card-text"></span>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+
+            <div class="swipe-hint">
+                <svg class="hint-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="hint-text">Tap to choose</span>
+            </div>
         </div>
 
+        <!-- Pass Screen -->
         <div id="pass-screen" class="screen">
-            <h2>Pass it to your partner!</h2>
-            <button id="continue-btn">Continue</button>
+            <div class="screen-content center">
+                <div class="pass-animation">
+                    <div class="phone-mockup">
+                        <div class="phone-screen"></div>
+                    </div>
+                    <svg class="hand-icon" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 8c0-2 2-4 4-4s4 2 4 4v12M20 12c0-2 2-4 4-4M16 16c0-2 2-4 4-4M28 20v-4c0-2 2-4 4-4s4 2 4 4v12c0 6-4 10-10 14-6-4-10-8-10-14V12c0-2 2-4 4-4s4 2 4 4v8" 
+                              stroke="#FF6B5B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2 class="screen-title">Pass it over!</h2>
+                <p class="screen-subtitle">Hand the device to your partner</p>
+                <button id="continue-btn" class="btn btn-primary btn-large">
+                    <span class="btn-text">I'm Player 2</span>
+                    <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
         </div>
 
+        <!-- Results Screen -->
         <div id="results-screen" class="screen">
-            <h2>Results</h2>
-            <div id="compatibility-score"></div>
-            <div class="progress-container">
-                <div class="progress-bar" id="compatibility-bar"></div>
+            <div class="results-header">
+                <div class="score-circle" id="score-circle">
+                    <svg class="score-ring" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B5B"/>
+                                <stop offset="100%" style="stop-color:#4ECDC4"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="score-ring-bg" cx="60" cy="60" r="54"/>
+                        <circle class="score-ring-progress" id="score-ring-progress" cx="60" cy="60" r="54"/>
+                    </svg>
+                    <div class="score-content">
+                        <span class="score-percent" id="compatibility-score">0%</span>
+                        <span class="score-label">match</span>
+                    </div>
+                </div>
+                <h2 class="results-title">You're alike!</h2>
             </div>
-            <div class="choices-comparison-container">
-                <!-- Choices will be added here dynamically -->
+
+            <div class="choices-scroll">
+                <div class="choices-comparison-container" id="choices-comparison">
+                    <!-- Dynamically populated -->
+                </div>
             </div>
-            <button id="play-again-btn">Play Again</button>
+
+            <div class="action-bottom">
+                <button id="play-again-btn" class="btn btn-secondary btn-large">
+                    <span class="btn-text">Play Again</span>
+                    <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
+
     <script src="app.js"></script>
     <script src="aiService.js"></script>
 </body>
